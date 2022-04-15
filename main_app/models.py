@@ -9,12 +9,24 @@ CLEAN =(
     ('PM', 'Evening'),
     
 )
+class Lace(models.Model):
+    name = models.CharField(max_length=50)
+    color = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
+        
+    def get_absolute_url(self):
+        return reverse('laces_detail', kwargs={'pk': self.id})
+
 class Sneaker(models.Model):
     # def __init__(self, name,brand,description,release):
     name = models.CharField(max_length=100)
     brand = models.CharField(max_length=101)
     description = models.TextField(max_length=250)
     release = models.DateField('Release Date')
+
+    laces = models.ManyToManyField(Lace)
     
 
     def __str__(self):

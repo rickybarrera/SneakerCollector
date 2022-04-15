@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Lace List</h1>
+
+{% for lace in lace_list %}
+  <a href="{% url 'laces_detail' lace.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ lace.name }}</span>
+            <p>Color: {{ lace.color }}</p>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Lace Details</h1>
+
+<div class="row">
+  <div class="col s6 col-offset-3">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ lace.name }}</span>
+        <p>Color: {{ lace.color }}</p>
+      </div>
+      <div class="card-action">
+        <a href="{% url 'laces_update' lace.id %}">Edit</a>
+        <a href="{% url 'laces_delete' lace.id %}">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
