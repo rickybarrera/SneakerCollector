@@ -18,4 +18,5 @@ urlpatterns = [
     path('sneakers/<int:sneaker_id>/add_cleaning/', views.add_cleaning, name='add_cleaning'),
     path('sneakers/<int:sneaker_id>/assoc_lace/<int:lace_id>/', views.assoc_lace, name='assoc_lace'),
     path('sneakers/<int:sneaker_id>/add_photo/', views.add_photo, name='add_photo'),
+      path('accounts/signup/', views.signup, name='signup')
 ]
