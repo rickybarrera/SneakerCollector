@@ -1,1 +1,1 @@
-web: gunicorn djangosneakercollector.wsgi
+web: gunicorn sneakercollector.wsgi
